@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NavBar from './NavBar.js';
+import MediaPlayer from './MediaPlayer.js';
 import '../styles/App.css';
 
 class App extends Component {
@@ -29,6 +30,7 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
+        <MediaPlayer />
       </div>
     );
   }

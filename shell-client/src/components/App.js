@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NavBar from './NavBar.js';
+import LeftPanel from './LeftPanel.js';
 import MediaPlayer from './MediaPlayer.js';
 import '../styles/App.css';
 
@@ -30,6 +31,7 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
+        <LeftPanel />
         <MediaPlayer />
       </div>
     );

@@ -2,5 +2,15 @@
   display: flex;
   flex: 0 0 100%;
   flex-flow: row wrap;
-  align-items: center;
+  align-items: flex-end;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.nav-bar div:not(.logo) {
+  margin: 4px;
+  margin-left: 15px;
 }

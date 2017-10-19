@@ -1,9 +1,13 @@
-const http = require('http');
+const express = require('express');
+require('dotenv').config();
 
-const server = http.createServer((req, res) => {
-  res.end(`Server is connected!`)
+const app = express(); 
+
+app.get(`/`, (req, res) => {
+  console.log("endpoint of '/' hit!");
+  res.send('does this show in console');
 })
 
-server.listen(3001, 'localhost', () => {
-  console.log(`server.js is listening in on port 3001`)
+app.listen(process.env.SERVER_PORT, () => {
+  console.log(`server.js is listening in on port ${process.env.SERVER_PORT}`);
 })

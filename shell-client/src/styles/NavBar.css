@@ -1,0 +1,6 @@
+.nav-bar {
+  display: flex;
+  flex: 0 0 100%;
+  flex-flow: row wrap;
+  align-items: center;
+}

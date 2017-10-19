@@ -1,0 +1,26 @@
+{
+  "name": "shell.",
+  "version": "1.0.0",
+  "description": "a social multimedia sharing app",
+  "main": "server.js",
+  "dependencies": {
+    "concurrently": "^3.5.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"cd shell-client && npm start\"",
+    "server": "node server.js",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boybutcher/shell..git"
+  },
+  "author": "BQN",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boybutcher/shell./issues"
+  },
+  "homepage": "https://github.com/boybutcher/shell.#readme"
+}

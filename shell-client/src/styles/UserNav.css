@@ -1,0 +1,16 @@
+.user-nav {
+  display: flex;
+  flex: 0 0 50%;
+  flex-flow: row wrap;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.username {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.username:hover {
+  color: rgb(2, 88, 99);
+}

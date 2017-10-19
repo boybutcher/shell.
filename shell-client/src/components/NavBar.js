@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import StaticNav from './StaticNav.js';
+import UserNav from './UserNav.js';
 import '../styles/NavBar.css';
 
 class NavBar extends Component {
   render() {
     return (
       <div className='nav-bar'>
-        <div className='logo'>shell.</div>
-        <div>about.</div>
-        <div>source code.</div>
+        <StaticNav />
+        <UserNav />
       </div>
     )
   }

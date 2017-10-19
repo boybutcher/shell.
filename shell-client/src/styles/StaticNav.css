@@ -1,0 +1,23 @@
+.static-nav {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-end;
+  flex: 0 0 50%;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 900;
+  margin-left: 8px;
+  cursor: default;
+}
+
+.static-nav div:not(.logo) {
+  margin: 4px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.static-nav div:not(.logo):hover {
+  color: rgb(2, 88, 99);
+}

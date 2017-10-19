@@ -4,20 +4,3 @@
   flex-flow: row wrap;
   align-items: flex-end;
 }
-
-.logo {
-  font-size: 30px;
-  font-weight: 900;
-  margin-left: 8px;
-  cursor: default;
-}
-
-.nav-bar div:not(.logo) {
-  margin: 4px;
-  margin-left: 15px;
-  cursor: pointer;
-}
-
-.nav-bar div:not(.logo):hover {
-  color: rgb(2, 88, 99);
-}

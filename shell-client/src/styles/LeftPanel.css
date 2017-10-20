@@ -1,3 +1,4 @@
 .left-panel {
-  height: auto%;
+  display: flex;
+  height: 96%;
 }

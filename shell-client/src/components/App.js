@@ -1,39 +1,24 @@
 import React, { Component } from 'react';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import rootReducer from '../root-reducer.js';
 import NavBar from './NavBar.js';
 import LeftPanel from './LeftPanel.js';
 import MediaPlayer from './MediaPlayer.js';
 import '../styles/App.css';
 
+const store = createStore(rootReducer);
+
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.test = this.test.bind(this);
-  }
-
-  test() {
-    return fetch(`/`)
-      .then(response => {
-        console.log('response: ', response)
-        return response.json()
-      }).then(readable => {
-        console.log('readable: ', readable)
-      })
-      .catch(error => {
-        console.error(`error: ${error}`);
-      })
-  }
-
-  componentWillMount() {
-    this.test();
-  }
-
   render() {
     return (
-      <div className="App">
-        <NavBar />
-        <LeftPanel />
-        <MediaPlayer />
-      </div>
+      <Provider store={store}>
+        <div className="App">
+          <NavBar />
+          <LeftPanel />
+          <MediaPlayer />
+        </div>
+      </Provider>
     );
   }
 }

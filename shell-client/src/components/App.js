@@ -7,13 +7,12 @@ import LeftPanel from './LeftPanel.js';
 import MediaPlayer from './MediaPlayer.js';
 import '../styles/App.css';
 
-// const store = createStore(rootReducer);
+const store = createStore(rootReducer);
 
 class App extends Component {
   render() {
-    //need to reimplement store => store={store}
     return (
-      <Provider>
+      <Provider store={store}>
         <div className="App">
           <NavBar />
           <LeftPanel />

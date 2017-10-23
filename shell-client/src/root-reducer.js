@@ -1,3 +1,6 @@
 import { combineReducers } from 'redux';
+import queue from './reducers/queue-reducer.js';
 
-// export default combineReducers();
+export default combineReducers({
+  queue,
+});

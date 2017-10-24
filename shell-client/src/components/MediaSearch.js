@@ -43,7 +43,7 @@ class MediaSearch extends Component {
         response.json()
       ))
       .then(parseable => {
-        console.log('parseable')
+        console.log('parseable: ', parseable);
       })
   }
 

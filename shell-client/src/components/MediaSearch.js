@@ -12,6 +12,7 @@ class MediaSearch extends Component {
       source: 'youtube',
     }
     this.handleInputChange = this.handleInputChange.bind(this);
+    this.searchSource = this.searchSource.bind(this);
   }
 
   handleInputChange(e) {
@@ -19,10 +20,34 @@ class MediaSearch extends Component {
       name,
       value,
     } = e.target;
+
     this.setState({
-      [name]: e.target.value,
+      [name]: value,
     });
   }
+
+  searchSource() {
+    const {
+      query,
+      source,
+    } = this.state;
+
+    console.log(`searching for '${query}' at ${source}...`);
+
+    fetch(`/${source}`, {
+      method: 'post',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({'query': query}),
+    })
+      .then(response => (
+        response.json()
+      ))
+      .then(parseable => {
+        console.log('parseable')
+      })
+  }
+
+
 
   render() {
     return (
@@ -32,6 +57,7 @@ class MediaSearch extends Component {
           className='query'
           name='query'
           type='text'
+          value={this.state.query}
           onChange={this.handleInputChange}>
         </input>
         <select
@@ -43,7 +69,7 @@ class MediaSearch extends Component {
         </select>
         <button
           className='query-submit-button'
-          onClick={this.props.submitMedia}>
+          onClick={this.searchSource}>
           search
         </button>
         <SearchResults />

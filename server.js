@@ -1,11 +1,18 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 require('dotenv').config();
 
-const app = express(); 
+const app = express();
 
-app.get(`/`, (req, res) => {
-  console.log("endpoint of '/' hit!");
-  res.send('does this show in console');
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+
+app.use(bodyParser.json());
+
+app.post(`/youtube`, (req, res) => {
+  const queryString = req.body.query.split(' ').join('+');
+  res.send();
 })
 
 app.listen(process.env.SERVER_PORT, () => {

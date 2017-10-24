@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { submitMedia } from '../actions/queue-actions.js';
+import { addSearchItem } from '../actions/search-actions.js';
 import SearchResults from './SearchResults.js';
 import '../styles/MediaSearch.css';
 
@@ -32,8 +33,6 @@ class MediaSearch extends Component {
       source,
     } = this.state;
 
-    console.log(`searching for '${query}' at ${source}...`);
-
     fetch(`/${source}`, {
       method: 'post',
       headers: {'Content-Type':'application/json'},
@@ -43,7 +42,7 @@ class MediaSearch extends Component {
         response.json()
       ))
       .then(parseable => {
-        console.log('parseable: ', parseable);
+        this.props.addSearchItem(parseable.items)
       })
   }
 
@@ -52,7 +51,7 @@ class MediaSearch extends Component {
   render() {
     return (
       <div className='media-search'>
-        <div className='search-heading'>search.</div>
+        <div className='heading'>search.</div>
         <input
           className='query'
           name='query'
@@ -86,6 +85,9 @@ const mapDispatchToProps = dispatch => {
   return {
     submitMedia: () => {
       dispatch(submitMedia())
+    },
+    addSearchItem: data => {
+      dispatch(addSearchItem(data))
     }
   }
 }

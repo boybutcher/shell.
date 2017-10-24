@@ -10,6 +10,7 @@ class QueueContainer extends Component {
     } = this.props;
     return (
       <div className='queue-container'>
+        <div className='heading'>up next.</div>
         {
           mediaData.map(mediaItem => {
             return <QueueItem />

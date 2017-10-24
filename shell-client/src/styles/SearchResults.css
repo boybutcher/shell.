@@ -1,0 +1,7 @@
+.search-results-container {
+  display: flex;
+  flex-flow: column;
+  height: 60vh;
+  overflow-y: scroll;
+  flex: 0 0 100%;
+}

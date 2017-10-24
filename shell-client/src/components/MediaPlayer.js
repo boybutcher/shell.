@@ -8,8 +8,7 @@ class MediaPlayer extends Component {
         <iframe
           width='100%'
           height='75%'
-          src='http://www.youtube.com/embed/_lAjs75dkho?controls=0'
-        >
+          src='http://www.youtube.com/embed/PUZn1I6llJs?controls=0&autoplay=1'>
         </iframe>
       </div>
     )

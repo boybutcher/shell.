@@ -1,0 +1,21 @@
+.media-search {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search-heading {
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.query {
+  width: 100%;
+}
+
+.search-sources {
+  width: 75%;
+}
+
+.query-submit-button {
+  width: 25%;
+}

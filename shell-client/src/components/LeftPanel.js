@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import QueueContainer from './QueueContainer';
-import MediaSubmission from './MediaSubmission';
+import MediaSearch from './MediaSearch.js';
 import '../styles/LeftPanel.css';
 
 class LeftPanel extends Component {
@@ -8,7 +8,7 @@ class LeftPanel extends Component {
     return (
       <div className='left-panel'>
         <QueueContainer />
-        <MediaSubmission />
+        <MediaSearch />
       </div>
     )
   }

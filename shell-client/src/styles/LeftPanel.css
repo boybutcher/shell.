@@ -1,5 +1,6 @@
 .left-panel {
   display: flex;
   height: 96%;
+  width: 24%;
   flex-flow: column;
 }

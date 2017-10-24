@@ -5,7 +5,6 @@ import '../styles/QueueContainer.css';
 
 class QueueContainer extends Component {
   render() {
-    console.log('this.props.mediaData: ', this.props.mediaData);
     const {
       mediaData,
     } = this.props;

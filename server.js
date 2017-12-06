@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 app.post(`/youtube`, (req, res) => {
   const queryString = req.body.query.split(' ').join('+');
-  const queryUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&q=${queryString}&key=${process.env.YOUTUBE_KEY}`;
+  const queryUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&type=video&q=${queryString}&key=${process.env.YOUTUBE_KEY}`;
   
   request(queryUrl, (error, response, body) => {
     if (!error) {

@@ -10,7 +10,8 @@ class SearchResults extends Component {
   }
 
   addItemToQueue(e) {
-    console.log(this.props.searchItems[e.target.id]);
+    e.preventDefault();
+    console.log(this.props.searchItems[e.currentTarget.id]);
   }
 
   render() {

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { submitMedia } from '../actions/queue-actions.js';
 import { addSearchItem } from '../actions/search-actions.js';
 import SearchResults from './SearchResults.js';
 import '../styles/MediaSearch.css';
@@ -83,9 +82,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    submitMedia: () => {
-      dispatch(submitMedia())
-    },
     addSearchItem: data => {
       dispatch(addSearchItem(data))
     }

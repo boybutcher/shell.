@@ -3,7 +3,6 @@ import '../styles/SearchResultItem.css';
 
 class SearchResultItem extends Component {
   render() {
-    console.log('this.props.searchItemData: ', this.props.searchItemData);
     const {
       id: {
         videoId,

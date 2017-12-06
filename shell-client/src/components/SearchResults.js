@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { submitMedia } from '../actions/queue-actions.js';
 import SearchResultItem from './SearchResultItem.js';
 import '../styles/SearchResults.css';
 
@@ -10,8 +11,13 @@ class SearchResults extends Component {
   }
 
   addItemToQueue(e) {
+    const {
+      submitMedia,
+      searchItems,
+    } = this.props;
+
     e.preventDefault();
-    console.log(this.props.searchItems[e.currentTarget.id]);
+    submitMedia(searchItems[e.currentTarget.id]);
   }
 
   render() {
@@ -44,8 +50,17 @@ const mapStateToProps = state => {
   }
 }
 
+const mapDispatchToProps = dispatch => {
+  return {
+    submitMedia: data => {
+      dispatch(submitMedia(data))
+    },
+  }
+}
+
 const SearchResultsContainer = connect(
   mapStateToProps,
+  mapDispatchToProps,
 )(SearchResults);
 
 export default SearchResultsContainer;

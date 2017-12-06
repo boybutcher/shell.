@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/SearchResultItem.css';
 
 class SearchResultItem extends Component {
   render() {
@@ -20,8 +21,8 @@ class SearchResultItem extends Component {
     return (
       <div 
         className='search-result-item'
-        onClick={this.props.clickHandler}
-        id={this.props.id}>
+        id={this.props.id}
+        onClick={this.props.clickHandler}>
         <img src={url} />
         <div>{title}</div>
       </div>

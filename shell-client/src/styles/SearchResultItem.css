@@ -1,0 +1,16 @@
+.search-result-item {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1vh;
+  cursor: pointer;
+}
+
+.search-result-item:hover {
+  color: rgb(2, 88, 99);
+}
+
+.search-result-item img {
+  margin-right: .5vh;
+}
+
+/*border: <width> <styling> <color>*/

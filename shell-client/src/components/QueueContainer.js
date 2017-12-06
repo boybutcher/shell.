@@ -12,8 +12,14 @@ class QueueContainer extends Component {
       <div className='queue-container'>
         <div className='heading'>up next.</div>
         {
-          mediaData.map(mediaItem => {
-            return <QueueItem />
+          mediaData.map((mediaItem, index) => {
+            return (
+              <QueueItem 
+                mediaItemData={mediaItem}
+                key={index}
+                id={index}
+              />
+            )
           })
         }
       </div>

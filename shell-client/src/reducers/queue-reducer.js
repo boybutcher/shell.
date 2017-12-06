@@ -7,7 +7,7 @@ const Queue = (state = initialState, action = {}) => {
     case 'SUBMIT_MEDIA':
       return {
         ...state,
-        mediaData: [...state.mediaData, {title: action.title, source: action.source}],
+        mediaData: [...state.mediaData, action.mediaData],
       }
     default:
       return state;

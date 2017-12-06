@@ -18,7 +18,10 @@ class SearchResultItem extends Component {
     } = this.props.searchItemData;
 
     return (
-      <div className='search-result-item'>
+      <div 
+        className='search-result-item'
+        onClick={this.props.clickHandler}
+        id={this.props.id}>
         <img src={url} />
         <div>{title}</div>
       </div>

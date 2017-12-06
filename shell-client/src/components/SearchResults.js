@@ -4,6 +4,15 @@ import SearchResultItem from './SearchResultItem.js';
 import '../styles/SearchResults.css';
 
 class SearchResults extends Component {
+  constructor(props) {
+    super(props);
+    this.addItemToQueue = this.addItemToQueue.bind(this);
+  }
+
+  addItemToQueue(e) {
+    console.log(this.props.searchItems[e.target.id]);
+  }
+
   render() {
     const {
       searchItems,
@@ -16,7 +25,10 @@ class SearchResults extends Component {
             return (
               <SearchResultItem
                 searchItemData={searchItemData}
-                key={index}/>
+                key={index}
+                id={index}
+                clickHandler={this.addItemToQueue}
+              />
             )
           })
         }

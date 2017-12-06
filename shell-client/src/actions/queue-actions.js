@@ -1,7 +1,6 @@
-export const submitMedia = () => {
+export const submitMedia = (mediaData) => {
   return {
     type: 'SUBMIT_MEDIA',
-    title: 'Melancholy Hill (Acoustic)',
-    source: 'YouTube',
+    mediaData: mediaData,
   }
 }

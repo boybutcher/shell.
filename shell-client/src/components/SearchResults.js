@@ -16,8 +16,12 @@ class SearchResults extends Component {
       searchItems,
     } = this.props;
 
+    const {
+      id,
+    } = e.currentTarget;
+
     e.preventDefault();
-    submitMedia(searchItems[e.currentTarget.id]);
+    submitMedia(searchItems[id]);
   }
 
   render() {

@@ -7,11 +7,8 @@ class MediaPlayer extends Component {
     const {
       mediaData
     } = this.props;
-    console.log('mediaData: ', mediaData);
 
     const playerSrc = mediaData[0] ? mediaData[0].id.videoId : '_lAjs75dkho';
-
-    console.log('playerSrc: ', playerSrc);
 
     return (
       <div className='media-player'>

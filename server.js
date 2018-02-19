@@ -17,7 +17,7 @@ app.post(`/youtube`, (req, res) => {
   
   request(queryUrl, (error, response, body) => {
     if (!error) {
-      res.send(body);
+      res.status(200).send(body);
     } else {
       console.error('GET YouTube request failed...');
       res.status(400).send({error});

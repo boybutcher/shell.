@@ -6,8 +6,13 @@ class StaticNav extends Component {
     return (
       <div className='static-nav'>
         <div className='logo'>shell.</div>
-        <div>about.</div>
-        <div>source code.</div>
+        <a>about.</a>
+        <a
+          href='https://github.com/boybutcher/shell.'
+          target='_blank'
+        >
+          source code.
+        </a>
       </div>
     )
   }

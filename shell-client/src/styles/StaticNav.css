@@ -12,12 +12,14 @@
   cursor: default;
 }
 
-.static-nav div:not(.logo) {
+a {
   margin: 4px;
   margin-left: 15px;
-  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  /*cursor: pointer;*/
 }
 
-.static-nav div:not(.logo):hover {
+a:hover {
   color: rgb(2, 88, 99);
 }
